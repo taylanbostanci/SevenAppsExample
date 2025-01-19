@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'SevenApssExample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SevenApssExample
+	pod 'Alamofire'
+	pod 'SnapKit'
+
+  target 'SevenApssExampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SevenApssExampleUITests' do
+    # Pods for testing
+  end
+
+end

@@ -1,0 +1,6 @@
+framework module Pods_SevenApssExample_SevenApssExampleUITests {
+  umbrella header "Pods-SevenApssExample-SevenApssExampleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

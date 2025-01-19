@@ -6,7 +6,6 @@
 //
 
 import SnapKit
-import Foundation
 
 final class UserDetailViewController: BaseViewController {
     // MARK: - Properties

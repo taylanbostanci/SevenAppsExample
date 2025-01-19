@@ -5,9 +5,10 @@
 //  Created by TaylanBostanci on 19.01.2025.
 //
 
+import UIKit
 import SnapKit
 
-class UserViewController: BaseViewController {
+final class UserViewController: BaseViewController {
     
     // MARK: - UI Elements
     private let userTableView = UITableView()
@@ -24,15 +25,8 @@ class UserViewController: BaseViewController {
         viewModel.fetchUsers()
     }
     
-    func bindViewModel() {
-          viewModel.onUsersUpdated = { [weak self] in
-              DispatchQueue.main.async {
-                  self?.userTableView.reloadData()
-              }
-          }
-      }
-
-    // MARK: - UI Configure Methods
+    
+    // MARK: - Setup UI Elements
     private func setupUI() {
         view.backgroundColor = .white
         view.addSubview(userTableView)
@@ -47,10 +41,27 @@ class UserViewController: BaseViewController {
         userTableView.delegate = self
         userTableView.dataSource = self
     }
-
+    
+    // MARK: - Binding in VM
+    func bindViewModel() {
+        showLoading()
+        viewModel.onUsersUpdated = { [weak self] in
+            DispatchQueue.main.async {
+                self?.userTableView.reloadData()
+                self?.hideLoading()
+            }
+        }
+        
+        viewModel.onErrorOccurred = { [weak self] error in
+            DispatchQueue.main.async {
+                self?.hideLoading()
+                self?.showAlert(message: error.localizedDescription)
+            }
+        }
+    }
 }
 
-// MARK: - UITableViewDelegate
+//MARK: - UITableViewDelegate
 extension UserViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.users.count
@@ -61,8 +72,8 @@ extension UserViewController: UITableViewDelegate,UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let user = viewModel.users[indexPath.row]
-        cell.configure(with: user)
+        let userModel = viewModel.users[indexPath.row]
+        cell.configure(with: userModel)
         return cell
     }
     

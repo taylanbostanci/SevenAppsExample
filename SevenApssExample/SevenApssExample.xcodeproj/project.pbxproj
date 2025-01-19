@@ -30,6 +30,7 @@
 		FEB274782D3D5D4A00BA8EE2 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274772D3D5D4A00BA8EE2 /* UserDetailViewController.swift */; };
 		FEB2747B2D3D5D9200BA8EE2 /* LocalizableUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB2747A2D3D5D9200BA8EE2 /* LocalizableUtils.swift */; };
 		FEB2747E2D3D5DA200BA8EE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEB2747C2D3D5DA200BA8EE2 /* Localizable.strings */; };
+		FEB274822D3D600500BA8EE2 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274812D3D600500BA8EE2 /* UserRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		FEB2747D2D3D5DA200BA8EE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FEB2747F2D3D5DAE00BA8EE2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FEB274802D3D5DAE00BA8EE2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FEB274812D3D600500BA8EE2 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				FEB274702D3D5A5F00BA8EE2 /* APIClient.swift */,
+				FEB274812D3D600500BA8EE2 /* UserRepository.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				FEB274762D3D5C3400BA8EE2 /* BaseTableViewCell.swift in Sources */,
 				FEB274742D3D5AB800BA8EE2 /* Constants.swift in Sources */,
 				FEB2746A2D3D58B600BA8EE2 /* UITableView+Ext.swift in Sources */,
+				FEB274822D3D600500BA8EE2 /* UserRepository.swift in Sources */,
 				FEB274622D3D562100BA8EE2 /* UserModel.swift in Sources */,
 				FEB274672D3D57E800BA8EE2 /* BaseViewController.swift in Sources */,
 				FEB274712D3D5A5F00BA8EE2 /* APIClient.swift in Sources */,

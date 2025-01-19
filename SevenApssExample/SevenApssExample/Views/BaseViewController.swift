@@ -5,19 +5,50 @@
 //  Created by TaylanBostanci on 19.01.2025.
 //
 
-import UIKit
 import SnapKit
-import Foundation
 
 class BaseViewController: UIViewController {
     let localizer = LocalizableUtils.shared
+    
+    private var loadingView: UIView!
+    private var loadingIndicator: UIActivityIndicatorView!
 
     var customNavBar: UINavigationBar!
     var navItem: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupLoadingView()
         setupNavBar()
+    }
+    
+    private func setupLoadingView() {
+        loadingView = UIView(frame: view.bounds)
+        loadingView.backgroundColor = .black
+        loadingView.isHidden = true
+        
+        loadingIndicator = UIActivityIndicatorView(style: .large)
+        loadingIndicator.color = .white
+        loadingView.addSubview(loadingIndicator)
+        loadingIndicator.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+        view.addSubview(loadingView)
+    }
+    
+    func showLoading() {
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = false
+            self.loadingIndicator.startAnimating()
+        }
+    }
+    
+    func hideLoading() {
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = true
+            self.loadingIndicator.stopAnimating()
+        }
     }
     
     private func setupNavBar() {
@@ -39,19 +70,18 @@ class BaseViewController: UIViewController {
         customNavBar.setItems([navItem], animated: false)
     }
     
-    @objc func dismissViewController() {
+    func navigateTo(_ viewController: UIViewController, animated: Bool = true) {
+        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: animated, completion: nil)
+    }
+    
+    @objc private func dismissViewController() {
         if let navigationController = navigationController {
             navigationController.popViewController(animated: true)
         } else {
             dismiss(animated: true, completion: nil)
         }
     }
-    
-    func navigateTo(_ viewController: UIViewController, animated: Bool = true) {
-        viewController.modalPresentationStyle = .fullScreen
-        present(viewController, animated: animated, completion: nil)
-    }
-
     
     func showAlert(message: String) {
         let alert = UIAlertController(title: localizer.stringForKey(key: LocalizableUtils.Strings.error.rawValue), message: message, preferredStyle: .alert)

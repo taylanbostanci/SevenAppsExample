@@ -31,6 +31,7 @@
 		FEB2747B2D3D5D9200BA8EE2 /* LocalizableUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB2747A2D3D5D9200BA8EE2 /* LocalizableUtils.swift */; };
 		FEB2747E2D3D5DA200BA8EE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEB2747C2D3D5DA200BA8EE2 /* Localizable.strings */; };
 		FEB274822D3D600500BA8EE2 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274812D3D600500BA8EE2 /* UserRepository.swift */; };
+		FEB274842D3D61DC00BA8EE2 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274832D3D61DC00BA8EE2 /* UILabel+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		FEB2747F2D3D5DAE00BA8EE2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FEB274802D3D5DAE00BA8EE2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FEB274812D3D600500BA8EE2 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		FEB274832D3D61DC00BA8EE2 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				FEB274692D3D58B600BA8EE2 /* UITableView+Ext.swift */,
+				FEB274832D3D61DC00BA8EE2 /* UILabel+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				FEB274332D3D538500BA8EE2 /* UserViewController.swift in Sources */,
 				FEB274782D3D5D4A00BA8EE2 /* UserDetailViewController.swift in Sources */,
 				FEB2742F2D3D538500BA8EE2 /* AppDelegate.swift in Sources */,
+				FEB274842D3D61DC00BA8EE2 /* UILabel+Ext.swift in Sources */,
 				FEB274312D3D538500BA8EE2 /* SceneDelegate.swift in Sources */,
 				FEB2747B2D3D5D9200BA8EE2 /* LocalizableUtils.swift in Sources */,
 				FEB2746E2D3D58D900BA8EE2 /* UserTableViewCell.swift in Sources */,

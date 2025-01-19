@@ -101,9 +101,11 @@ final class UserDetailViewController: BaseViewController {
     
    private func setupUI() {
        view.backgroundColor = .white
-       nameLabel.text = userModel.name
-       emailLabel.text = userModel.email
-       phoneLabel.text = userModel.phone
-       websiteLabel.text = userModel.website
+       self.navigationItem.title = localizer.stringForKey(key: LocalizableUtils.Strings.userDetailPage.rawValue)
+
+       nameLabel.setBoldAndItalicText(boldText: "\(localizer.stringForKey(key: LocalizableUtils.Strings.name.rawValue)): ", italicText: userModel.name)
+       emailLabel.setBoldAndItalicText(boldText: "\(localizer.stringForKey(key: LocalizableUtils.Strings.email.rawValue)): ", italicText: userModel.email)
+       phoneLabel.setBoldAndItalicText(boldText: "\(localizer.stringForKey(key: LocalizableUtils.Strings.phone.rawValue)): ", italicText: userModel.phone)
+       websiteLabel.setBoldAndItalicText(boldText: "\(localizer.stringForKey(key: LocalizableUtils.Strings.website.rawValue)): " , italicText: userModel.website)
     }
 }

@@ -21,6 +21,7 @@ final class UserViewModel {
     var onUsersUpdated: UsersUpdatedCallback?
     var onErrorOccurred: ErrorOccurredCallback?
     
+    // MARK: - Initializers
     init(userRepository: UserRepository = UserRepository()) {
         self.userRepository = userRepository
     }

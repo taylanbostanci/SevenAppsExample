@@ -8,21 +8,24 @@
 import SnapKit
 
 class BaseViewController: UIViewController {
+    
+    // MARK: - Properties
     let localizer = LocalizableUtils.shared
     
+    // MARK: - UI Elements
     private var loadingView: UIView!
     private var loadingIndicator: UIActivityIndicatorView!
-
-    var customNavBar: UINavigationBar!
-    var navItem: UINavigationItem!
+    private var customNavBar: UINavigationBar!
+    private var navItem: UINavigationItem!
     
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupLoadingView()
         setupNavBar()
     }
     
+    // MARK: - Setup UI Elements
     private func setupLoadingView() {
         loadingView = UIView(frame: view.bounds)
         loadingView.backgroundColor = .black
@@ -51,38 +54,38 @@ class BaseViewController: UIViewController {
         }
     }
     
+    // MARK: - Navigation Bar Configuration
     private func setupNavBar() {
-        customNavBar = UINavigationBar()
-        view.addSubview(customNavBar)
-        customNavBar.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.leading.trailing.equalToSuperview()
-            make.height.equalTo(44)
+        // Check if the view controller is not the root view controller
+        if navigationController?.viewControllers.first != self {
+            
+            navItem = UINavigationItem(title: "")
+            
+            navItem.leftBarButtonItem = UIBarButtonItem(
+                title: localizer.stringForKey(key: LocalizableUtils.Strings.back.rawValue),
+                style: .plain,
+                target: self,
+                action: #selector(backButtonTapped)
+            )
         }
-        
-        navItem = UINavigationItem(title: "")
-        navItem.leftBarButtonItem = UIBarButtonItem(
-            title: localizer.stringForKey(key: LocalizableUtils.Strings.back.rawValue),
-            style: .plain,
-            target: self,
-            action: #selector(dismissViewController)
-        )
-        customNavBar.setItems([navItem], animated: false)
     }
-    
-    func navigateTo(_ viewController: UIViewController, animated: Bool = true) {
-        viewController.modalPresentationStyle = .fullScreen
-        present(viewController, animated: animated, completion: nil)
-    }
-    
-    @objc private func dismissViewController() {
+
+    @objc private func backButtonTapped() {
+        // Navigate back if the view controller is not the root
         if let navigationController = navigationController {
             navigationController.popViewController(animated: true)
         } else {
             dismiss(animated: true, completion: nil)
         }
     }
+
+    // MARK: - Routing
+    func navigateTo(_ viewController: UIViewController, animated: Bool = true) {
+        viewController.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(viewController, animated: true)
+    }
     
+    // MARK: - UIAlertViewController
     func showAlert(message: String) {
         let alert = UIAlertController(title: localizer.stringForKey(key: LocalizableUtils.Strings.error.rawValue), message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: localizer.stringForKey(key: LocalizableUtils.Strings.ok.rawValue), style: .default))

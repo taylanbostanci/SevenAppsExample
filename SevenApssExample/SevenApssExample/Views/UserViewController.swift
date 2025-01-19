@@ -23,11 +23,14 @@ final class UserViewController: BaseViewController {
         setupTableView()
         bindViewModel()
         viewModel.fetchUsers()
+        
     }
-    
     
     // MARK: - Setup UI Elements
     private func setupUI() {
+        
+        self.navigationItem.title = localizer.stringForKey(key: LocalizableUtils.Strings.userList.rawValue)
+
         view.backgroundColor = .white
         view.addSubview(userTableView)
         

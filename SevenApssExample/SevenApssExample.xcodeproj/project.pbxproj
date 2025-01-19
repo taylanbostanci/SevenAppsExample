@@ -24,6 +24,9 @@
 		FEB2746A2D3D58B600BA8EE2 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274692D3D58B600BA8EE2 /* UITableView+Ext.swift */; };
 		FEB2746E2D3D58D900BA8EE2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB2746C2D3D58D900BA8EE2 /* UserTableViewCell.swift */; };
 		FEB2746F2D3D58D900BA8EE2 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB2746D2D3D58D900BA8EE2 /* UserTableViewCell.xib */; };
+		FEB274712D3D5A5F00BA8EE2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274702D3D5A5F00BA8EE2 /* APIClient.swift */; };
+		FEB274742D3D5AB800BA8EE2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274732D3D5AB800BA8EE2 /* Constants.swift */; };
+		FEB274762D3D5C3400BA8EE2 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274752D3D5C3400BA8EE2 /* BaseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		FEB274692D3D58B600BA8EE2 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		FEB2746C2D3D58D900BA8EE2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		FEB2746D2D3D58D900BA8EE2 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		FEB274702D3D5A5F00BA8EE2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		FEB274732D3D5AB800BA8EE2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FEB274752D3D5C3400BA8EE2 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,7 @@
 				FEB2746B2D3D58C500BA8EE2 /* Cells */,
 				FEB274602D3D561700BA8EE2 /* Views */,
 				FEB274652D3D567D00BA8EE2 /* Network */,
+				FEB274722D3D5AA800BA8EE2 /* Utils */,
 				FEB274682D3D589B00BA8EE2 /* Extension */,
 				FEB274372D3D538600BA8EE2 /* Assets.xcassets */,
 				FEB274392D3D538600BA8EE2 /* LaunchScreen.storyboard */,
@@ -209,6 +216,7 @@
 		FEB274652D3D567D00BA8EE2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FEB274702D3D5A5F00BA8EE2 /* APIClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -226,8 +234,17 @@
 			children = (
 				FEB2746C2D3D58D900BA8EE2 /* UserTableViewCell.swift */,
 				FEB2746D2D3D58D900BA8EE2 /* UserTableViewCell.xib */,
+				FEB274752D3D5C3400BA8EE2 /* BaseTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		FEB274722D3D5AA800BA8EE2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FEB274732D3D5AB800BA8EE2 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,9 +491,12 @@
 				FEB2742F2D3D538500BA8EE2 /* AppDelegate.swift in Sources */,
 				FEB274312D3D538500BA8EE2 /* SceneDelegate.swift in Sources */,
 				FEB2746E2D3D58D900BA8EE2 /* UserTableViewCell.swift in Sources */,
+				FEB274762D3D5C3400BA8EE2 /* BaseTableViewCell.swift in Sources */,
+				FEB274742D3D5AB800BA8EE2 /* Constants.swift in Sources */,
 				FEB2746A2D3D58B600BA8EE2 /* UITableView+Ext.swift in Sources */,
 				FEB274622D3D562100BA8EE2 /* UserModel.swift in Sources */,
 				FEB274672D3D57E800BA8EE2 /* BaseViewController.swift in Sources */,
+				FEB274712D3D5A5F00BA8EE2 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

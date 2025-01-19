@@ -5,7 +5,7 @@
 //  Created by TaylanBostanci on 19.01.2025.
 //
 
-import UIKit
+import SnapKit
 
 class UserViewController: BaseViewController {
     
@@ -20,7 +20,17 @@ class UserViewController: BaseViewController {
         super.viewDidLoad()
         setupUI()
         setupTableView()
+        bindViewModel()
+        viewModel.fetchUsers()
     }
+    
+    func bindViewModel() {
+          viewModel.onUsersUpdated = { [weak self] in
+              DispatchQueue.main.async {
+                  self?.userTableView.reloadData()
+              }
+          }
+      }
 
     // MARK: - UI Configure Methods
     private func setupUI() {
@@ -43,10 +53,16 @@ class UserViewController: BaseViewController {
 // MARK: - UITableViewDelegate
 extension UserViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as? UserTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let user = viewModel.users[indexPath.row]
+        cell.configure(with: user)
+        return cell
     }
 }

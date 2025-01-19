@@ -18,36 +18,6 @@
             endingLineNumber = "27"
             landmarkName = "fetchUsers()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EF4045AE-838D-49E5-A2D2-E4C154576497 - 10d77beac1c9ef64"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SevenApssExample.UserViewModel.fetchUsers() -&gt; ()"
-                  moduleName = "SevenApssExample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/enqura/Documents/GitHub/SevenAppsExample/SevenApssExample/SevenApssExample/ViewModels/UserViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27">
-               </Location>
-               <Location
-                  uuid = "EF4045AE-838D-49E5-A2D2-E4C154576497 - 8a6e34caff225e7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;SevenApssExample.UserResponseModel&gt;, SevenApssExample.APIError&gt;) -&gt; () in SevenApssExample.UserViewModel.fetchUsers() -&gt; ()"
-                  moduleName = "SevenApssExample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/enqura/Documents/GitHub/SevenAppsExample/SevenApssExample/SevenApssExample/ViewModels/UserViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "27"
-                  endingLineNumber = "27">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

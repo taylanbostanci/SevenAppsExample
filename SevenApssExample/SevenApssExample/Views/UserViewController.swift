@@ -65,4 +65,12 @@ extension UserViewController: UITableViewDelegate,UITableViewDataSource {
         cell.configure(with: user)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedUserModel = viewModel.users[indexPath.row]
+        
+        let detailViewController = UserDetailViewController(userModel: selectedUserModel)
+        navigateTo(detailViewController)
+    }
 }

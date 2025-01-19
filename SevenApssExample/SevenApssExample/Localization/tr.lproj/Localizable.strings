@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  SevenApssExample
+
+  Created by TaylanBostanci on 19.01.2025.
+  
+*/
+
+//MARK: - Common
+"back" = "Geri";
+"ok" = "Tamam";
+"error" = "Hata";

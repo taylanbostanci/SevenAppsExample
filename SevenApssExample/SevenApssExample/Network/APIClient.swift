@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-final class APIClient {
+class APIClient {
     static let shared = APIClient()
     
     // MARK: - API Request with Alamofire Network

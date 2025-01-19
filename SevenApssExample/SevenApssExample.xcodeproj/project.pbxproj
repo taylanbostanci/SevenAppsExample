@@ -12,12 +12,14 @@
 		D944F192442777DF636C8C31 /* Pods_SevenApssExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55547088AEAA104363A93656 /* Pods_SevenApssExample.framework */; };
 		FEB2742F2D3D538500BA8EE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB2742E2D3D538500BA8EE2 /* AppDelegate.swift */; };
 		FEB274312D3D538500BA8EE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274302D3D538500BA8EE2 /* SceneDelegate.swift */; };
-		FEB274332D3D538500BA8EE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274322D3D538500BA8EE2 /* ViewController.swift */; };
+		FEB274332D3D538500BA8EE2 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274322D3D538500BA8EE2 /* UserViewController.swift */; };
 		FEB274382D3D538600BA8EE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEB274372D3D538600BA8EE2 /* Assets.xcassets */; };
 		FEB2743B2D3D538600BA8EE2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FEB2743A2D3D538600BA8EE2 /* Base */; };
 		FEB274462D3D538600BA8EE2 /* SevenApssExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274452D3D538600BA8EE2 /* SevenApssExampleTests.swift */; };
 		FEB274502D3D538600BA8EE2 /* SevenApssExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB2744F2D3D538600BA8EE2 /* SevenApssExampleUITests.swift */; };
 		FEB274522D3D538600BA8EE2 /* SevenApssExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274512D3D538600BA8EE2 /* SevenApssExampleUITestsLaunchTests.swift */; };
+		FEB274622D3D562100BA8EE2 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274612D3D562100BA8EE2 /* UserModel.swift */; };
+		FEB274642D3D562C00BA8EE2 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274632D3D562C00BA8EE2 /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,7 @@
 		FEB2742B2D3D538500BA8EE2 /* SevenApssExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SevenApssExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB2742E2D3D538500BA8EE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEB274302D3D538500BA8EE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FEB274322D3D538500BA8EE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FEB274322D3D538500BA8EE2 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		FEB274372D3D538600BA8EE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEB2743A2D3D538600BA8EE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEB2743C2D3D538600BA8EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 		FEB2744B2D3D538600BA8EE2 /* SevenApssExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SevenApssExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB2744F2D3D538600BA8EE2 /* SevenApssExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenApssExampleUITests.swift; sourceTree = "<group>"; };
 		FEB274512D3D538600BA8EE2 /* SevenApssExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenApssExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FEB274612D3D562100BA8EE2 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		FEB274632D3D562C00BA8EE2 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +143,10 @@
 			children = (
 				FEB2742E2D3D538500BA8EE2 /* AppDelegate.swift */,
 				FEB274302D3D538500BA8EE2 /* SceneDelegate.swift */,
-				FEB274322D3D538500BA8EE2 /* ViewController.swift */,
+				FEB2745E2D3D55F900BA8EE2 /* Models */,
+				FEB2745F2D3D560600BA8EE2 /* ViewModels */,
+				FEB274602D3D561700BA8EE2 /* Views */,
+				FEB274652D3D567D00BA8EE2 /* Network */,
 				FEB274372D3D538600BA8EE2 /* Assets.xcassets */,
 				FEB274392D3D538600BA8EE2 /* LaunchScreen.storyboard */,
 				FEB2743C2D3D538600BA8EE2 /* Info.plist */,
@@ -162,6 +169,37 @@
 				FEB274512D3D538600BA8EE2 /* SevenApssExampleUITestsLaunchTests.swift */,
 			);
 			path = SevenApssExampleUITests;
+			sourceTree = "<group>";
+		};
+		FEB2745E2D3D55F900BA8EE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FEB274612D3D562100BA8EE2 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FEB2745F2D3D560600BA8EE2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FEB274632D3D562C00BA8EE2 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FEB274602D3D561700BA8EE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FEB274322D3D538500BA8EE2 /* UserViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FEB274652D3D567D00BA8EE2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,9 +440,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEB274332D3D538500BA8EE2 /* ViewController.swift in Sources */,
+				FEB274642D3D562C00BA8EE2 /* UserViewModel.swift in Sources */,
+				FEB274332D3D538500BA8EE2 /* UserViewController.swift in Sources */,
 				FEB2742F2D3D538500BA8EE2 /* AppDelegate.swift in Sources */,
 				FEB274312D3D538500BA8EE2 /* SceneDelegate.swift in Sources */,
+				FEB274622D3D562100BA8EE2 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

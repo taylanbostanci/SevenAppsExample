@@ -25,7 +25,6 @@ class LocalizableUtils: NSObject {
         
         //User List Page Cases
         case userList = "user_list"
-
         
         //Detail Page Cases
         case name = "name"
@@ -33,5 +32,11 @@ class LocalizableUtils: NSObject {
         case phone = "phone"
         case website = "website"
         case userDetailPage = "user_detail_page"
+        
+        //API Errors
+        case invalidURL = "invalidURL"
+        case noData = "noData"
+        case failed_decode_response = "failed_decode_response"
+
     }
 }

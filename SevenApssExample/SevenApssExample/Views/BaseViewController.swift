@@ -59,7 +59,7 @@ class BaseViewController: UIViewController {
         // Check if the view controller is not the root view controller
         if navigationController?.viewControllers.first != self {
             
-            navItem = UINavigationItem(title: "")
+            navItem = UINavigationItem()
             
             navItem.leftBarButtonItem = UIBarButtonItem(
                 title: localizer.stringForKey(key: LocalizableUtils.Strings.back.rawValue),

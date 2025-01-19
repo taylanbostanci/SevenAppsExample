@@ -14,7 +14,6 @@ final class UserTableViewCell: BaseTableViewCell<UserResponseModel> {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
     
-    
     // MARK: - Lifecycle Methods
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,12 +21,12 @@ final class UserTableViewCell: BaseTableViewCell<UserResponseModel> {
     }
     
     // MARK: - Setup UI Elements
-    func configureUI() {
+    private func configureUI() {
         stackView.backgroundColor = .cyan
-        stackView.layer.cornerRadius = 12
+        stackView.layer.cornerRadius = Constants.defaultCornerRadius
         
-        userNameLabel.font = .boldSystemFont(ofSize: 16)
-        userEmailLabel.font = .italicSystemFont(ofSize: 16)
+        userNameLabel.font = .boldSystemFont(ofSize: Constants.defaultFontSize)
+        userEmailLabel.font = .italicSystemFont(ofSize: Constants.defaultFontSize)
     }
     
     // MARK: - Configure UI with ResponseModel Data

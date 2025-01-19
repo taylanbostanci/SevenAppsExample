@@ -21,9 +21,9 @@ final class UserViewController: BaseViewController {
         super.viewDidLoad()
         setupUI()
         setupTableView()
+        
         bindViewModel()
         viewModel.fetchUsers()
-        
     }
     
     // MARK: - Setup UI Elements
@@ -71,7 +71,7 @@ extension UserViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as? UserTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCells.userTableViewCell, for: indexPath) as? UserTableViewCell else {
             return UITableViewCell()
         }
         

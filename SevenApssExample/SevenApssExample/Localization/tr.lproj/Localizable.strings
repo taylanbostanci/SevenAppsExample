@@ -20,3 +20,8 @@
 "phone" = "Telefon";
 "website" = "Website";
 "user_detail_page" = "Kullanıcı Detay Sayfası";
+
+//MARK: - API Errors
+ "invalidURL" = "The URL provided is invalid.";
+ "noData" = "No data was received from the server.";
+ "failed_decode_response" = "Failed to decode the response.";

@@ -11,7 +11,6 @@ import Alamofire
 final class APIClient {
     static let shared = APIClient()
     
-    
     // MARK: - API Request with Alamofire Network
     func getUserRequest<T: Decodable>(urlString: String, completion: @escaping (Result<T, APIError>) -> Void) {
         guard let url = URL(string: urlString) else {
@@ -54,11 +53,11 @@ enum APIError: Error {
     var localizedDescription: String {
         switch self {
         case .invalidURL:
-            return "The URL provided is invalid."
+            return Constants.APIErors.invalidURL
         case .noDataReceived:
-            return "No data was received from the server."
+            return Constants.APIErors.noDataReceived
         case .decodingFailed:
-            return "Failed to decode the response."
+            return Constants.APIErors.decodingFailed
         case .networkError(let message):
             return message
         }

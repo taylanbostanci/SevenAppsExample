@@ -22,3 +22,7 @@
 "website" = "Website";
 "user_detail_page" = "User Detail Page";
 
+//MARK: - API Errors
+ "invalidURL" = "Geçersiz URL.";
+ "noData" = "Sunucudan veri alınamadı.";
+ "failed_decode_response" = "Yanıt çözümlenemedi.";;

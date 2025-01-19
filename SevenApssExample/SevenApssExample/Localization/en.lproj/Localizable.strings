@@ -6,8 +6,19 @@
   
 */
 
-
 //MARK: - Common
 "back" = "Back";
 "ok" = "OK";
 "error" = "Error";
+
+//MARK: - User List Page
+"user_list" = "User List";
+
+
+//MARK: - Detail Page
+"name" = "Name";
+"email" = "Email";
+"phone" = "Phone";
+"website" = "Website";
+"user_detail_page" = "User Detail Page";
+

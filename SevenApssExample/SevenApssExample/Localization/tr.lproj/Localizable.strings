@@ -10,3 +10,13 @@
 "back" = "Geri";
 "ok" = "Tamam";
 "error" = "Hata";
+
+//MARK: - User List Page
+"user_list" = "Kullanıcı Listesi";
+
+//MARK: - Detail Page
+"name" = "İsim";
+"email" = "Eposta";
+"phone" = "Telefon";
+"website" = "Website";
+"user_detail_page" = "Kullanıcı Detay Sayfası";

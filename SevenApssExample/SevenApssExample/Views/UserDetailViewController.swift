@@ -30,16 +30,16 @@ final class UserDetailViewController: BaseViewController {
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 20
+        stackView.spacing = Constants.defaultPadding
         stackView.alignment = .fill
         stackView.backgroundColor = .cyan
-        stackView.layer.cornerRadius = 12
+        stackView.layer.cornerRadius = Constants.defaultCornerRadius
         return stackView
     }()
 
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: Constants.defaultFontSize)
         label.textColor = .darkGray
         label.textAlignment = .center
         return label
@@ -47,7 +47,7 @@ final class UserDetailViewController: BaseViewController {
 
     private let emailLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: Constants.defaultFontSize)
         label.textColor = .darkGray
         label.textAlignment = .center
         return label
@@ -55,7 +55,7 @@ final class UserDetailViewController: BaseViewController {
 
     private let phoneLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: Constants.defaultFontSize)
         label.textColor = .darkGray
         label.textAlignment = .center
         return label
@@ -63,7 +63,7 @@ final class UserDetailViewController: BaseViewController {
 
     private let websiteLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: Constants.defaultFontSize)
         label.textColor = .darkGray
         label.textAlignment = .center
         return label
@@ -93,9 +93,9 @@ final class UserDetailViewController: BaseViewController {
             make.top.bottom.leading.trailing.equalToSuperview()
         }
         stackView.snp.makeConstraints { make in
-            make.top.equalTo(baseView.snp.top).offset(200)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
+            make.top.equalTo(baseView.snp.top).offset(Constants.defaultTopMargin)
+            make.leading.equalToSuperview().offset(Constants.defaultPadding)
+            make.trailing.equalToSuperview().offset(-Constants.defaultPadding)
         }
     }
     

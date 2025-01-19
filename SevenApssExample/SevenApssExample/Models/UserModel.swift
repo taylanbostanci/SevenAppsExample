@@ -15,7 +15,7 @@ struct UserModel {
     var phone: String
 }
 
-struct UserResponseModel: Codable {
+struct UserResponseModel: Codable,Equatable {
     let id: Int
     let name: String
     let username: String

@@ -32,6 +32,7 @@
 		FEB2747E2D3D5DA200BA8EE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FEB2747C2D3D5DA200BA8EE2 /* Localizable.strings */; };
 		FEB274822D3D600500BA8EE2 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274812D3D600500BA8EE2 /* UserRepository.swift */; };
 		FEB274842D3D61DC00BA8EE2 /* UILabel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274832D3D61DC00BA8EE2 /* UILabel+Ext.swift */; };
+		FEB274882D3D870300BA8EE2 /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB274872D3D870300BA8EE2 /* MockAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		FEB274802D3D5DAE00BA8EE2 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FEB274812D3D600500BA8EE2 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		FEB274832D3D61DC00BA8EE2 /* UILabel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Ext.swift"; sourceTree = "<group>"; };
+		FEB274872D3D870300BA8EE2 /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				FEB274652D3D567D00BA8EE2 /* Network */,
 				FEB274722D3D5AA800BA8EE2 /* Utils */,
 				FEB274682D3D589B00BA8EE2 /* Extension */,
+				FEB274862D3D86ED00BA8EE2 /* Mock */,
 				FEB274792D3D5D7900BA8EE2 /* Localization */,
 				FEB274372D3D538600BA8EE2 /* Assets.xcassets */,
 				FEB274392D3D538600BA8EE2 /* LaunchScreen.storyboard */,
@@ -278,6 +281,14 @@
 				FEB274812D3D600500BA8EE2 /* UserRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		FEB274862D3D86ED00BA8EE2 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				FEB274872D3D870300BA8EE2 /* MockAPIClient.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEB274642D3D562C00BA8EE2 /* UserViewModel.swift in Sources */,
+				FEB274882D3D870300BA8EE2 /* MockAPIClient.swift in Sources */,
 				FEB274332D3D538500BA8EE2 /* UserViewController.swift in Sources */,
 				FEB274782D3D5D4A00BA8EE2 /* UserDetailViewController.swift in Sources */,
 				FEB2742F2D3D538500BA8EE2 /* AppDelegate.swift in Sources */,
@@ -783,6 +795,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LQ7CGQP2M5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -804,6 +817,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LQ7CGQP2M5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -824,6 +838,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LQ7CGQP2M5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sevenAppsExample.SevenApssExampleUITests;
@@ -843,6 +858,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LQ7CGQP2M5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sevenAppsExample.SevenApssExampleUITests;

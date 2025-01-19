@@ -173,6 +173,7 @@
 				FEB2745F2D3D560600BA8EE2 /* ViewModels */,
 				FEB2746B2D3D58C500BA8EE2 /* Cells */,
 				FEB274602D3D561700BA8EE2 /* Views */,
+				FEB274852D3D74A200BA8EE2 /* Repositories */,
 				FEB274652D3D567D00BA8EE2 /* Network */,
 				FEB274722D3D5AA800BA8EE2 /* Utils */,
 				FEB274682D3D589B00BA8EE2 /* Extension */,
@@ -231,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				FEB274702D3D5A5F00BA8EE2 /* APIClient.swift */,
-				FEB274812D3D600500BA8EE2 /* UserRepository.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -270,6 +270,14 @@
 				FEB2747C2D3D5DA200BA8EE2 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		FEB274852D3D74A200BA8EE2 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				FEB274812D3D600500BA8EE2 /* UserRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

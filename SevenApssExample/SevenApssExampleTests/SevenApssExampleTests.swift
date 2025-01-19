@@ -2,7 +2,7 @@
 //  SevenApssExampleTests.swift
 //  SevenApssExampleTests
 //
-//  Created by ENQURA on 19.01.2025.
+//  Created by TaylanBostanci on 19.01.2025.
 //
 
 import XCTest
